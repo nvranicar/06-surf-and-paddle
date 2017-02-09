@@ -1,6 +1,125 @@
 // @import 'yoga';
-// @import 'normalize';
+@import 'normalize';
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
 @import 'box-sizing';
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.header {
+  background-image: url('http://www.mrwallpaper.com/wallpapers/Ocean-Waves.jpg');
+
+
+  // &__pic {
+  //   max-width: 100%;
+  // }
+  //
+  // &__bg {
+  //   background: rgba(#0155b8,.6);
+  // }
+  //
+
+
+  padding: 10rem;
+  overflow: auto;
+}
+
+.overlay::after {
+    background: rgba(#0155b8,.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navbar {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
+
+  & > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  // margin: 5rem;
+
+
+  &__title {
+    font-size: 6rem;
+    color: #fff;
+    margin: 0;
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+}
+
+.section {
+  padding: 1rem;
+}
+
+.container {
+  max-width: 65rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.article {
+  width: calc(66% - 4rem);
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    & * {
+      margin: 0;
+    }
+
+    &__bottom {
+      display: flex;
+      align-items: center;
+
+      & > * + * {
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.byline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > * + * {
+    margin-left: 0.5rem;
+  }
+}
+
+.sidebar {
+  width: calc(33% - 4rem);
+  margin: 2rem;
+}
