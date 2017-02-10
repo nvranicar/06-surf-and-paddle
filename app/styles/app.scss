@@ -5,6 +5,11 @@
 // @import 'font-awesome';
 @import 'box-sizing';
 
+$c-blue: #0155b8;
+$c-lightgrey: rgba(#000,.47);
+$c-darkgrey: rgba(#000,.8);
+$c-white: #fff;
+
 body {
   margin: 0;
 }
@@ -16,28 +21,16 @@ ul {
 
 .header {
   background-image: url('http://www.mrwallpaper.com/wallpapers/Ocean-Waves.jpg');
-
-
-  // &__pic {
-  //   max-width: 100%;
-  // }
-  //
-  // &__bg {
-  //   background: rgba(#0155b8,.6);
-  // }
-  //
-
-
-  padding: 10rem;
+  padding: 12rem;
   overflow: auto;
 }
 
 .overlay::after {
-    background: rgba(#0155b8,.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  background: rgba($c-blue,.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .navbar {
@@ -48,12 +41,17 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5rem 3rem;
+  padding: 0.5rem 7rem;
 
   & > * {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
+  }
+  & * {
+    margin: 0.5rem;
   }
 }
 
@@ -66,7 +64,7 @@ ul {
 
   &__title {
     font-size: 6rem;
-    color: #fff;
+    color: $c-white;
     margin: 0;
   }
 
@@ -76,7 +74,7 @@ ul {
 }
 
 .section {
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .container {
@@ -107,19 +105,139 @@ ul {
       }
     }
   }
+
+  &__main {
+  }
+  &__text {
+    color: $c-darkgrey;
+    line-height: 1.5rem;
+  }
+  &__quote {
+    color: $c-blue;
+    font-size: 2rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-left: $c-lightgrey 0.1rem solid;
+  }
+
+  &__footer {
+    display: flex;
+    & > * + * {
+      margin-left: 1rem;
+    }
+    & * {
+      padding: 0.5rem;
+      color: $c-white;
+    }
+  }
+}
+
+.comments {
+  background: $c-lightgrey;
+}
+
+.save {
+  background: $c-lightgrey;
+}
+
+.share {
+  background: $c-blue;
 }
 
 .byline {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: $c-blue;
+  font-weight: bold;
 
   & > * + * {
     margin-left: 0.5rem;
   }
+
+  &__img {
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.timestamp {
+  color: $c-lightgrey;
+}
+
+.underlined {
+  text-decoration: underline;
 }
 
 .sidebar {
   width: calc(33% - 4rem);
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__pic {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+    }
+
+    &__info {
+
+    }
+  }
+
+  &__content {
+    margin-top: 1rem;
+    &__heading {
+      font-size: 1.4rem;
+      color: $c-blue;
+      margin: 0;
+    }
+
+    &__text {
+      color: $c-lightgrey;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+.author-name {
+  text-align: center;
+  color: $c-blue;
+  font-size: 1.1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  color: $c-lightgrey;
+  margin-top: -1.5rem;
+
+  & > * + * {
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+    border-left: rgba(#000,.1) 0.1rem solid;
+  }
+}
+
+.ad {
+  margin-top: 2rem;
+
+  &__pic {
+    max-width: 100%;
+  }
+
+  &__about {
+    text-align: right;
+    color: $c-lightgrey;
+    text-decoration: underline;
+    margin-top: 0;
+  }
 }
