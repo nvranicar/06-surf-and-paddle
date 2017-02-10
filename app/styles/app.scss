@@ -6,9 +6,11 @@
 @import 'box-sizing';
 
 $c-blue: #0155b8;
-$c-lightgrey: rgba(#000,.47);
+$c-lightgrey: rgba(#000,.3);
 $c-darkgrey: rgba(#000,.8);
 $c-white: #fff;
+$c-navy: #00274f;
+$c-lightergrey: #b0b0b0;
 
 body {
   margin: 0;
@@ -42,6 +44,7 @@ ul {
   flex-direction: row;
   justify-content: space-between;
   padding: 0.5rem 7rem;
+  color: $c-navy;
 
   & > * {
     display: flex;
@@ -70,6 +73,7 @@ ul {
 
   &__subtitle {
     margin: 0;
+    color: $c-navy;
   }
 }
 
@@ -85,13 +89,19 @@ ul {
 }
 
 .article {
-  width: calc(66% - 4rem);
+  flex-basis: calc(66% - 4rem);
   margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   &__header {
+
+    &__headline {
+      font-size: 3rem;
+      color: $c-navy;
+    }
+
     & * {
       margin: 0;
     }
@@ -171,7 +181,7 @@ ul {
 }
 
 .sidebar {
-  width: calc(33% - 4rem);
+  flex-basis: calc(33% - 4rem);
   margin: 2rem;
   display: flex;
   flex-direction: column;
@@ -240,4 +250,66 @@ ul {
     text-decoration: underline;
     margin-top: 0;
   }
+}
+
+.footer {
+  width: 100vw;
+  border-top: $c-lightgrey 0.1rem solid;
+  color: $c-navy;
+
+  &__top {
+    padding: 2rem;
+
+    &__heading {
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    &__item {
+      flex-basis: calc(100% / 4);
+      margin: 0;
+
+      & > * {
+        background: $c-blue;
+        height: 20rem;
+        position: relative;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 15rem;
+    font-size: 0.9rem;
+    color: $c-lightergrey;
+    background: $c-navy;
+
+    &__right {
+      display: flex;
+      align-items: center;
+
+      & > * + * {
+        margin-left: 0.5rem;
+        padding-left: 0.5rem;
+        border-left: $c-lightgrey 0.1rem solid;
+      }
+    }
+  }
+}
+
+.post-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 1rem;
+  font-size: 1.5rem;
+  max-width: 20rem;
 }
