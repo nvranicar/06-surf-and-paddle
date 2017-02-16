@@ -22,12 +22,14 @@ ul {
 }
 
 .header {
-  background-image: url('http://www.mrwallpaper.com/wallpapers/Ocean-Waves.jpg');
-  padding: 12rem;
+  background: linear-gradient(rgba(#000, 0.4), rgba(#000, 0.4)), url('http://www.mrwallpaper.com/wallpapers/Ocean-Waves.jpg');
+  padding:  0.5rem 12rem;
   overflow: auto;
+  position: relative;
+  height: 30rem;
 }
 
-.overlay::after {
+.overlay::before {
   background: rgba($c-blue,.6);
   position: absolute;
   top: 0;
@@ -36,14 +38,10 @@ ul {
 }
 
 .navbar {
-  width: 100vw;
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5rem 7rem;
+  padding: 0.5rem 0;
   color: $c-navy;
 
   & > * {
@@ -62,13 +60,17 @@ ul {
   display: flex;
   align-items: center;
   flex-direction: column;
-  // margin: 5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 
   &__title {
     font-size: 6rem;
     color: $c-white;
     margin: 0;
+    text-align: center;
   }
 
   &__subtitle {
@@ -84,13 +86,26 @@ ul {
 .container {
   max-width: 65rem;
   margin: 0 auto;
+}
+
+.grid {
   display: flex;
   justify-content: space-around;
+
+  &__item-1 {
+    flex-basis: calc(66% - 4rem);
+    margin: 2rem;
+  }
+
+  &__item-2 {
+    flex-basis: calc(33% - 4rem);
+    margin: 2rem;
+  }
 }
 
 .article {
-  flex-basis: calc(66% - 4rem);
-  margin: 2rem;
+
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -135,35 +150,34 @@ ul {
     & > * + * {
       margin-left: 1rem;
     }
-    & * {
-      padding: 0.5rem;
-      color: $c-white;
-    }
   }
 }
 
-.comments__text {
+.button {
+  align-items: stretch;
+  color: $c-white;
+  display: flex;
   background: $c-lightgrey;
-}
+  padding: 0;
+  border: 0;
 
-.fa-comment {
-  background: $c-darkgrey;
-}
+  &__text {
+    padding: 0.5rem;
+  }
 
-.save__text {
-  background: $c-lightgrey;
-}
+  &__icon {
+    padding: 0.5rem;
+    display: block;
+    background: $c-darkgrey;
+  }
 
-.fa-cloud-upload {
-  background: $c-darkgrey;
-}
+  &:hover {
+    background: $c-blue;
 
-.share__text {
-  background: $c-blue;
-}
-
-.fa-share-square-o {
-  background: $c-navy;
+    &__icon {
+      background: $c-navy;
+    }
+  }
 }
 
 .byline {
@@ -193,11 +207,10 @@ ul {
 }
 
 .sidebar {
-  flex-basis: calc(33% - 4rem);
-  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
 
   &__author {
     display: flex;
