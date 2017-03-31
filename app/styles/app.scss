@@ -5,11 +5,11 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome';
 @import 'box-sizing';
 
-$c-blue: #0155b8;
+$c-blue: #0152b1;
 $c-lightgrey: rgba(#000,.3);
 $c-darkgrey: rgba(#000,.8);
 $c-white: #fff;
-$c-navy: #00274f;
+$c-navy: #022140;
 $c-lightergrey: #b0b0b0;
 
 body {
@@ -22,26 +22,19 @@ ul {
 }
 
 .header {
-  background: linear-gradient(rgba(#000, 0.4), rgba(#000, 0.4)), url('http://www.mrwallpaper.com/wallpapers/Ocean-Waves.jpg');
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('http://www.mrwallpaper.com/wallpapers/Ocean-Waves.jpg');
   padding:  0.5rem 12rem;
   overflow: auto;
   position: relative;
   height: 30rem;
-}
-
-.overlay::before {
-  background: rgba($c-blue,.6);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  background-size: cover;
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
   color: $c-navy;
 
   & > * {
@@ -54,6 +47,19 @@ ul {
   & * {
     margin: 0.5rem;
   }
+}
+
+.logo {
+  width: 3rem;
+  height: 3rem;
+}
+
+.search {
+  display: flex;
+}
+
+.fa-search {
+  font-size: 1.5rem;
 }
 
 .hero {
@@ -91,6 +97,7 @@ ul {
 .grid {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   &__item-1 {
     flex-basis: calc(66% - 4rem);
@@ -277,13 +284,44 @@ ul {
   }
 }
 
+.post-1 {
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('http://www.wallpapers13.com/wp-content/uploads/2016/01/Surfers-sport-wallpaper-11957.jpg');
+
+  &:hover {
+    background: url('http://www.wallpapers13.com/wp-content/uploads/2016/01/Surfers-sport-wallpaper-11957.jpg');
+  }
+}
+.post-2 {
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('https://s-media-cache-ak0.pinimg.com/736x/9d/7e/5d/9d7e5d0f8d68ef12d9782580f58b4500.jpg');
+
+  &:hover {
+    background: url('https://s-media-cache-ak0.pinimg.com/736x/9d/7e/5d/9d7e5d0f8d68ef12d9782580f58b4500.jpg');
+  }
+}
+.post-3 {
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('https://c1.staticflickr.com/7/6052/5914882435_2560985a8d_b.jpg');
+
+  &:hover {
+    background: url('https://c1.staticflickr.com/7/6052/5914882435_2560985a8d_b.jpg');
+  }
+}
+.post-4 {
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('https://s-media-cache-ak0.pinimg.com/736x/1d/05/10/1d05102269d3045564662a56efcd3821.jpg');
+
+  &:hover {
+    background: url('https://s-media-cache-ak0.pinimg.com/736x/1d/05/10/1d05102269d3045564662a56efcd3821.jpg');
+  }
+}
+
 .footer {
   width: 100vw;
   border-top: $c-lightgrey 0.1rem solid;
   color: $c-navy;
+  background: $c-navy;
 
   &__top {
     padding: 2rem;
+    background: $c-white;
 
     &__heading {
       text-align: center;
@@ -301,9 +339,14 @@ ul {
       margin: 0;
 
       & > * {
-        background: $c-blue;
         height: 20rem;
         position: relative;
+        background-size: cover;
+
+        &:hover {
+          background-size: cover;
+          color: white;
+        }
       }
     }
   }
@@ -315,7 +358,14 @@ ul {
     padding: 2rem 15rem;
     font-size: 0.9rem;
     color: $c-lightergrey;
-    background: $c-navy;
+
+    &__left {
+      display: flex;
+
+      > * + * {
+        margin-left: 0.5rem;
+      }
+    }
 
     &__right {
       display: flex;
