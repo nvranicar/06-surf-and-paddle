@@ -22,7 +22,7 @@ ul {
 }
 
 .header {
-  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('http://www.mrwallpaper.com/wallpapers/Ocean-Waves.jpg');
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('/images/waves.jpg');
   padding:  0.5rem 12rem;
   overflow: auto;
   position: relative;
@@ -285,31 +285,31 @@ ul {
 }
 
 .post-1 {
-  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('http://www.wallpapers13.com/wp-content/uploads/2016/01/Surfers-sport-wallpaper-11957.jpg');
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('/images/surfers.jpg');
 
   &:hover {
-    background: url('http://www.wallpapers13.com/wp-content/uploads/2016/01/Surfers-sport-wallpaper-11957.jpg');
+    background: url('/images/surfers.jpg');
   }
 }
 .post-2 {
-  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('https://s-media-cache-ak0.pinimg.com/736x/9d/7e/5d/9d7e5d0f8d68ef12d9782580f58b4500.jpg');
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('/images/buoy.JPG');
 
   &:hover {
-    background: url('https://s-media-cache-ak0.pinimg.com/736x/9d/7e/5d/9d7e5d0f8d68ef12d9782580f58b4500.jpg');
+    background: url('/images/buoy.JPG');
   }
 }
 .post-3 {
-  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('https://c1.staticflickr.com/7/6052/5914882435_2560985a8d_b.jpg');
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('/images/shack.jpg');
 
   &:hover {
-    background: url('https://c1.staticflickr.com/7/6052/5914882435_2560985a8d_b.jpg');
+    background: url('/images/shack.jpg');
   }
 }
 .post-4 {
-  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('https://s-media-cache-ak0.pinimg.com/736x/1d/05/10/1d05102269d3045564662a56efcd3821.jpg');
+  background: linear-gradient(rgba($c-blue, 0.4), rgba($c-blue, 0.4)), url('/images/sunset.jpg');
 
   &:hover {
-    background: url('https://s-media-cache-ak0.pinimg.com/736x/1d/05/10/1d05102269d3045564662a56efcd3821.jpg');
+    background: url('/images/sunset.jpg');
   }
 }
 
